@@ -1,0 +1,63 @@
+.btn-confirm {
+    color: #fff;
+    background-color: #1f75cb;
+    box-shadow: inset 0 0 0 1px #1068bf;
+
+    &:hover {
+        box-shadow: inset 0 0 0 2px #064787, 0 2px 2px 0 rgba(0, 0, 0, .08);
+        background: #1068bf;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 0 1px #033464, 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+        outline: none;
+        background-color: #0b5cad
+    }
+
+    &:focus {
+        box-shadow: inset 0 0 0 1px #064787, 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+        outline: none;
+        background-color: #1068bf;
+    }
+
+    &-secondary, &-tertiary {
+        background-color: #fff;
+        color: #1f75cb;
+        font-weight: 400;
+        box-shadow: inset 0 0 0 1px #1f75cb;
+
+        &:hover {
+            color: #0b5cad;
+            box-shadow: inset 0 0 0 2px #0b5cad, 0 2px 2px 0 rgba(0, 0, 0, .08);
+            background: #e9f3fc;
+        }
+
+        &:active {
+            color: #033464;
+            box-shadow: inset 0 0 0 1px #033464, 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+            outline: none;
+            background-color: #cbe2f9;
+        }
+
+        &:focus {
+            color: #0b5cad;
+            box-shadow: inset 0 0 0 1px #0b5cad, 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+            outline: none;
+            background-color: #e9f3fc;
+        }
+    }
+
+    &-tertiary {
+        box-shadow: none;
+        mix-blend-mode: multiply;
+
+        &:hover {
+            box-shadow: none;
+        }
+
+        &:active, &:focus {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+            outline: none;
+        }
+    }
+}

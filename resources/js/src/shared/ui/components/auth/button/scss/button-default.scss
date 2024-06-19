@@ -1,0 +1,36 @@
+.btn-default, .btn-default-secondary {
+    background-color: #fff;
+
+    &:hover {
+        box-shadow: inset 0 0 0 2px #89888d, 0 2px 2px 0 rgba(0, 0, 0, .08);
+        background: #ececef;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 0 1px #626168, 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+        outline: none;
+        background-color: #dcdcde;
+    }
+
+    &:focus {
+        box-shadow: inset 0 0 0 1px #89888d, 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+        outline: none;
+        background-color: #ececef;
+    }
+
+    &-tertiary {
+        background-color: transparent;
+        box-shadow: none;
+        mix-blend-mode: multiply;
+
+        &:hover {
+            background: #ececef;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px #428fdc;
+            outline: none;
+            background-color: #ececef;
+        }
+    }
+}

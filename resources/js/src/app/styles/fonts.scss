@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "GitLab Sans";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url(fonts/GitLabSans.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: "GitLab Sans";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+    font-named-instance: "Regular";
+    src: url(fonts/GitLabSans-Italic.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: "GitLab Mono";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    src: url(https://gitlab.com/assets/gitlab-mono/GitLabMono-08d2c5e8ff8fd3d2d6ec55bc7713380f8981c35f9d2df14e12b835464d6e8f23.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: "GitLab Mono";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+    src: url(https://gitlab.com/assets/gitlab-mono/GitLabMono-Italic-38e58d8df29485a20c550da1d0111e2c2169f6dcbcf894f2cd3afbdd97bcc588.woff2) format("woff2")
+}
+
+* {
+    font-variant-ligatures: none
+}

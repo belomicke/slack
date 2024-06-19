@@ -22,7 +22,7 @@ class CreateWorkspaceController extends Controller
         $name = $request->get('workspace_name') ?? 'test';
         $displayName = $request->get('workspace_profile_display_name');
         $avatarFile = $request->file('workspace_profile_avatar_file');
-        $defaultAvatarNumber = $request->get('workspace_profile_default_avatar_number') ?? 0;
+        $defaultAvatarNumber = $request->get('workspace_profile_default_avatar_number') ?? fake()->numberBetween(0, 26);
 
         $workspace = $this->createWorkspace(name: $name);
         $workspaceProfile = $this->createWorkspaceProfile(
@@ -45,7 +45,7 @@ class CreateWorkspaceController extends Controller
         return Workspace::create([
             'public_id' => Str::uuid(),
             'name' => $name,
-            'default_icon_number' => 0,
+            'default_icon_number' => fake()->numberBetween(0, 24),
         ])->fresh();
     }
 

@@ -2,13 +2,8 @@ export default interface ApiWorkspace {
     id: string
     name: string
     icon: {
-        icon_34: string
+        icon_36: string
         icon_44: string
-        icon_68: string
-        icon_88: string
-        icon_102: string
-        icon_132: string
-        icon_230: string
     }
     active_users: number
 }

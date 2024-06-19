@@ -10,6 +10,12 @@ class WorkspaceProfileResource
 {
     public function toJson(WorkspaceProfile $workspaceProfile, Workspace $workspace): array
     {
+        $icons = [];
+
+        foreach ([20, 36, 72, 96, 192, 256] as $size) {
+            $icons["icon_$size"] = $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: $size);
+        }
+
         return [
             'id' => $workspaceProfile->public_id,
             'email' => $workspaceProfile->email,
@@ -19,19 +25,12 @@ class WorkspaceProfileResource
             'title' => $workspaceProfile->display_name,
             'is_self' => $workspaceProfile->user_id === Auth::id(),
             'workspace_id' => $workspace->public_id,
-            'icon' => [
-                'icon_20' => $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: 20),
-                'icon_36' => $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: 36),
-                'icon_72' => $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: 72),
-                'icon_96' => $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: 96),
-                'icon_192' => $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: 192),
-                'icon_256' => $this->getProfileAvatar(workspaceProfile: $workspaceProfile, size: 256),
-            ]
+            'icon' => $icons
         ];
     }
 
     private function getProfileAvatar(WorkspaceProfile $workspaceProfile, int $size): string
     {
-        return "http://localhost/storage/workspace_profile_avatars/default/$workspaceProfile->default_avatar_number/$size.png";
+        return "http://localhost/workspace_profile_avatars/default/$workspaceProfile->default_avatar_number/$size.png";
     }
 }

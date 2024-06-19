@@ -7,13 +7,12 @@ export default interface ApiWorkspaceProfile {
     title: string
     is_self: boolean
     icon: {
-        icon_24: string
-        icon_32: string
-        icon_48: string
-        icon_64: string
+        icon_20: string
+        icon_36: string
+        icon_72: string
         icon_96: string
         icon_192: string
-        icon_512: string
+        icon_256: string
     }
     workspace_id: string
 }

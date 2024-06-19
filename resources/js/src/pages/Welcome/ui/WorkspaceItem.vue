@@ -29,7 +29,7 @@ const displayName = computed(() => {
         <div
             class="workspace-item__icon"
             :style="{
-                'background-image': `url(${workspace.icon.icon_88})`
+                'background-image': `url(${workspace.icon.icon_44})`
             }"
         />
         <div class="workspace-item__content">
@@ -37,7 +37,7 @@ const displayName = computed(() => {
             <div class="workspace-item__members">
                 <img
                     class="workspace-item__avatar"
-                    :src="profile.icon.icon_48"
+                    :src="profile.icon.icon_20"
                     alt="User icon"
                 />
                 <div class="workspace-item__display-name">

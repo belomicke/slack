@@ -21,7 +21,7 @@ export default {
         defaultAvatarNumber: {
             type: Number,
             required: false,
-            default: 0,
+            default: Math.ceil(Math.random() * 26),
         },
     },
     emits: [
@@ -31,7 +31,7 @@ export default {
     data() {
         return {
             file: undefined,
-            avatarNumber: this.getAvatarNumber(0),
+            avatarNumber: this.getAvatarNumber(26),
         }
     },
     computed: {
@@ -40,7 +40,7 @@ export default {
                 return URL.createObjectURL(this.file)
             }
 
-            return `http://localhost/storage/workspace_profile_avatars/default/${this.avatarNumber}/192.png`
+            return `http://localhost/workspace_profile_avatars/default/${this.avatarNumber}/96.png`
         },
     },
     watch: {
